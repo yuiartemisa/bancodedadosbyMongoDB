@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <title>Lista</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+    <div class="vh-100 justify-content-center align-items-center mt-10">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-12 col-lg-10">
+              <div class="card bg-white">
+                <div class="card-body"> 
+
+
+                    
+    <p class="fs-1 text-uppercase" >
+        Lista de Cargos
+    </p>
+    <a href="/cargo/form">CRIAR</a>
+    <table class="table">
+      <thead> 
+        <tr>
+            <th scope="col">Id</th>  
+          <th scope="col">Nome do Cargo</th>
+          <th scope="col">Descricao</th>
+          
+        </tr>
+      </thead>
+      <tbody>   
+       
+        <% lista.forEach(function(item,index){%>
+          <tr>
+            <td> <%-index%> </td>
+            <td> <%-item.nome%> </td>
+            <td> <%-item.descricao%> </td>
+         
+            <td>
+               <a href="/cargo/editar/<%-item._id%>">EDITAR</a>
+               &nbsp;
+               <a href="/cargo/deletar/<%-item._id%>">DELETAR</a>
+
+            </td>
+
+        
+          </tr>
+      <% }) %>
+       
+       
+      </tbody>
+    </table>
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
